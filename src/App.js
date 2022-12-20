@@ -8,6 +8,7 @@ function App() {
         {/* <img src={logo} className="App-logo" alt="logo" /> */}
         <p>
           Medisinoppslag.no?
+          {/* TODO:lage logo? finne ut navn. pluss sjekk notater på telefonen, implementer.*/}
         </p>
         <Search/>
       </header>
