@@ -1,4 +1,3 @@
-
 import { SearchForm } from '../components/search/SearchComponent';
 
 function Search() {

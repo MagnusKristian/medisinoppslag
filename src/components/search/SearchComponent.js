@@ -1,5 +1,7 @@
 import { useState } from "react";
 import Results from "../Results";
+import "./SearchComponentCss.css";
+
 
 export const SearchForm = () => {
   const [count1, setCount1] = useState(0);
@@ -42,21 +44,15 @@ export const SearchForm = () => {
   }
   return (
     <>
-      <div className="SearchPanel" style={{border: '1px solid rgba(0, 0, 0)', height:"33vh", width: "33vw",textAlign: "center"}}>
-        <div className="SearchForm" style={{border: '1px solid rgba(0, 0, 0)'}}>
+      <div className="SearchPanel" style={{border: '1px solid rgba(0, 0, 0)', height:"50vh", width: "33vw",textAlign: "center"}}>
+        <div className="SearchForm" style={{border: '1px solid red'}}>
           <form onSubmit={handleSubmit}>
-          <br/>
-          <br/>
-
             <label >Search</label>
             <div className="SearchDiv" style={{fontSize:"large"}}>{username} </div>
             <input type="text" id="SearchInput" name="Search" placeholder="Enter Text here" onChange={handleChange}/>
             <button>Search</button>
-            <br/>
-            <br/>
-            <br/>
           </form> 
-          asdasd
+          asdasd4t34t4
         </div>
         <Results/>
       </div>
