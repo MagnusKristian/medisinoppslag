@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Results from "../Results";
+import Results from "../Results/Results";
 import "./SearchComponentCss.css";
 
 
@@ -44,8 +44,8 @@ export const SearchForm = () => {
   }
   return (
     <>
-      <div className="SearchPanel" style={{border: '1px solid rgba(0, 0, 0)', height:"50vh", width: "33vw",textAlign: "center"}}>
-        <div className="SearchForm" style={{border: '1px solid red'}}>
+      <div className="SearchPanel">
+        <div className="SearchForm">
           <form onSubmit={handleSubmit}>
             <label >Search</label>
             <div className="SearchDiv" style={{fontSize:"large"}}>{username} </div>
@@ -54,7 +54,6 @@ export const SearchForm = () => {
           </form> 
           asdasd4t34t4
         </div>
-        <Results/>
       </div>
     </>
     

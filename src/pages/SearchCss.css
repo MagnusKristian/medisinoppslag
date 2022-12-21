@@ -1,0 +1,20 @@
+.Search{
+  border: 1px solid black;
+  height:50vh;
+  width: 50vw;
+  /* width: 300px; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: center; */
+}
+
+.SearchBox{
+  height: 50%;
+  width: 50%;
+}
+
+.ResultBox{
+  height: 50%;
+  width: 50%;
+}

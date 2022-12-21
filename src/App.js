@@ -10,8 +10,9 @@ function App() {
           Medisinoppslag.no?
           {/* TODO:lage logo? finne ut navn. pluss sjekk notater på telefonen, implementer.*/}
         </p>
-        <Search/>
       </header>
+      <Search/>
+
     </div>
   );
 }

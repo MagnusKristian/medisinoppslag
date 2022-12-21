@@ -1,5 +1,15 @@
-.Search{
-  border: 1px solid green;
-  height:300px;
-  /* width: 300px; */
+
+
+.SearchPanel{
+  border: 1px solid red;
+  height: 50%;
+  width: 50%;
+  /* height: 300px; */
+  /* width: 33vw; */
+
 }
+
+.SearchForm{
+  border: 1px solid green;
+}
+
