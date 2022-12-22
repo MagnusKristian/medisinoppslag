@@ -1,5 +1,6 @@
 import "./ResultsCss.css";
-import ResultCards from "./ResultCards";
+// import ResultCards from "./ResultCards";
+import UserCards from "../UserCards/UserCards";
 
 function Results() {
   return (
@@ -8,8 +9,10 @@ function Results() {
       Results here: <br/>
 
       asdasd
+      <UserCards/>
+
       </div>
-      {/* <ResultCards/> */}
+      
     </>
     
   );

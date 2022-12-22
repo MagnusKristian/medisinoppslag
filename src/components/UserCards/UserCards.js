@@ -1,8 +1,8 @@
-import "./ResultCardsCss.css";
-
 import React, { Component } from "react";
+import "./UserCardsCss.css";
 
-class ResultCards extends Component {
+
+class UserCards extends Component {
   state = {
     data: [],
     per: 9,
@@ -28,6 +28,19 @@ class ResultCards extends Component {
       });
   };
 
+
+
+  // loadData = () => {
+  //   const endpoint = `https://api-qa.helsedirektoratet.no/antall-innlagte/innlagte/nasjonalt`;
+  //   fetch(endpoint)
+  //   .then(response => {
+  //     console.log(response.status);
+  //     console.log(response.text());
+  // })
+      
+  // };
+
+  
   loadMore = () => {
     this.setState(
       prevState => ({
@@ -44,7 +57,7 @@ class ResultCards extends Component {
 
   render() {
     return (
-      <div className="clearfix">
+      <div className="clearfix Extra">
         <div className="row">
           {this.state.data.map(data => (
             <div className="col-md-4 animated fadeIn" key={data.id.value}>
@@ -87,4 +100,4 @@ class ResultCards extends Component {
   }
 }
 
-export default ResultCards;
+export default UserCards;
