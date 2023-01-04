@@ -9,7 +9,9 @@ function Results() {
       Results here: <br/>
 
       asdasd
-      <UserCards/>
+      {/* Swap this, maybe clean up/remove one step depending on features. */}
+      {/* fix and use resultCards instead. */}
+      {/* <UserCards/> */}
 
       </div>
       

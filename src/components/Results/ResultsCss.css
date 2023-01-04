@@ -4,21 +4,5 @@
   margin: 1vw;
  
 }
-.ResultBox{
-  /* width: fit-content; */
-  /* height: fit-content; */
-  /* height: 50%; */
-  /* width: 75%; */
-}
 
-.row{
-  display: flex;
-  float: left;
-  /* flex-wrap: wrap; */
-  margin-right: 10%;
-}
 
-.col-md-4{
-  width: 10%;
-  height: 10%;
-}

@@ -1,16 +1,25 @@
 .Search{
   border: 1px solid black;
-  height:50vh;
-  width: 50vw;
+  /* height:50vh; */
+  /* width: 50vw; */
   /* width: 300px; */
   display: flex;
   flex-direction: column;
   align-items: center;
   /* justify-content: center; */
+
+  /* margin: 10vw; */
+  width: 50%;
 }
 
 .SearchBox{
   height: 50%;
   width: 50%;
+}
+
+.ResultBox{
+  /* width: 50%; */
+  /* width: fit-content; */
+  /* height: fit-content; */
 }
 
