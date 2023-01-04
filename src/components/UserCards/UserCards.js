@@ -57,7 +57,7 @@ class UserCards extends Component {
 
   render() {
     return (
-      <div className="clearfix Extra">
+      <>
         <div className="row">
           {this.state.data.map(data => (
             <div className="col-md-4 animated fadeIn" key={data.id.value}>
@@ -95,7 +95,7 @@ class UserCards extends Component {
         >
           Load More Users
         </button>
-      </div>
+      </>
     );
   }
 }
