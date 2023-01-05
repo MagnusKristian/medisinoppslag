@@ -35,7 +35,7 @@ export const one = () => {
   let matchName = "x";
   let matchFound = false;
   data.forEach(element => {
-    if(element.name.first == searchWord){
+    if(element.name.first.toLowerCase() == searchWord.toLowerCase()){
       console.log("SUCCESS.");
       match = element;
       matchName = element.name.first +" "+ element.name.last;

@@ -93,7 +93,7 @@ class UserCards extends Component {
         >
           Log Data
         </button>
-
+          {/* TODO: THIS FORM HERE IS TEMOPORARY, REMOVE AND DO IT THE CORRECT WAY LATER. */}
           {/* <SearchForm/> */}
           <form onSubmit={this.handleSubmit}>
             <label >Search</label>
