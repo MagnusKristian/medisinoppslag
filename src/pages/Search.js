@@ -5,6 +5,8 @@ import "./SearchCss.css";
 import UserCards from "../components/UserCards/UserCards";
 import "../components/UserCards/UserCardsCss.css";
 
+import ResultCards from '../components/Results/ResultCards';
+
 
 
 function Search() {
@@ -24,6 +26,7 @@ function Search() {
 
         {/* <Results/> */}
       <UserCards/>
+      {/* <ResultCards/> */}
 
       </div>
     </div>

@@ -1,5 +1,12 @@
 import React, { Component } from "react";
 import "./UserCardsCss.css";
+import { one } from "../../Functions/SearchHelper";
+import { two } from "../../Functions/SearchHelper";
+
+import { searchFirstName } from "../../Functions/SearchHelper";
+
+import { SearchForm } from "../search/SearchComponent";
+
 
 
 class UserCards extends Component {
@@ -54,10 +61,55 @@ class UserCards extends Component {
   componentDidMount() {
     this.loadData();
   }
+  logData() {
+    console.log("Logging data:");
+    console.log(this.state.data);
+    console.log("Data logged.");
+  
+    // this.loadData();
+  }
+  search(searchWord, data) {
+    console.log("sup dawg");
+    searchFirstName(searchWord, data);
+  }
+
+  handleSubmit = (e) => { 
+    e.preventDefault();
+    alert('You searched for: ' + e.target[0].value);
+    console.log(e.target[0].value);
+    console.log(e.target.SearchInput.value+"...");
+
+    console.log("---Searchword? = "+`${e.target[0].value}`+"---");
+    this.search(e.target[0].value,this.state.data);
+  }
 
   render() {
     return (
       <>
+      <button
+          onClick={e => {
+            this.logData();
+          }}
+        >
+          Log Data
+        </button>
+
+          {/* <SearchForm/> */}
+          <form onSubmit={this.handleSubmit}>
+            <label >Search</label>
+            <div className="SearchDiv" style={{fontSize:"large"}}> </div>
+            <input type="text" id="SearchInput" name="Search" placeholder="Enter Text here" />
+            <button>Search</button>
+          </form> 
+
+        {/* <button
+          onClick={e => {
+            this.search(this.state.data);
+          }}
+        >
+          Search first name
+        </button> */}
+
         <div className="row">
           {this.state.data.map(data => (
             <div className="col-md-4 animated fadeIn" key={data.id.value}>

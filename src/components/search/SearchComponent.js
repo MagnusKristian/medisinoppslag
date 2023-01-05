@@ -52,7 +52,7 @@ export const SearchForm = () => {
             <input type="text" id="SearchInput" name="Search" placeholder="Enter Text here" onChange={handleChange}/>
             <button>Search</button>
           </form> 
-          asdasd4t34t4
+          ........
         </div>
       </div>
     </>
