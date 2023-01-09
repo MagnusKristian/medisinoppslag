@@ -14,14 +14,20 @@ class UserCards extends Component {
     data: [],
     per: 9,
     page: 1,
-    total_pages: null
+    total_pages: null,
+    apiTest: process.env.REACT_APP_API_KEY
   };
+
+  
 
   uppercase = word => {
     return word.charAt(0).toUpperCase() + word.slice(1);
   };
 
   loadData = () => {
+
+    // const MY_KEY = process.env.REACT_APP_API_KEY;
+
     const { per, page, data } = this.state;
     const endpoint = `https://randomuser.me/api/?nat=us&results=${per}&page=${page}`;
     fetch(endpoint)
@@ -62,6 +68,8 @@ class UserCards extends Component {
     this.loadData();
   }
   logData() {
+    console.log("API TEST: "+`${this.state.apiTest}`);
+
     console.log("Logging data:");
     console.log(this.state.data);
     console.log("Data logged.");
@@ -84,8 +92,12 @@ class UserCards extends Component {
   }
 
   render() {
+    let testText2 = "Text2!"+process.env.REACT_APP_API_KEY;
+    let testText = this.state.apiTest+"?";
+
     return (
       <>
+      <h1>Her er test: {testText} - {testText2} - {process.env.REACT_APP_API_KEY}</h1>
       <button
           onClick={e => {
             this.logData();
