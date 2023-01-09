@@ -112,7 +112,7 @@ class UserCards extends Component {
 
         <div className="row">
           {this.state.data.map(data => (
-            <div className="col-md-4 animated fadeIn" key={data.id.value}>
+            <div className="cardContainer" key={data.id.value}>
               <div className="card">
                 <div className="card-body">
                   <div className="avatar">
@@ -140,7 +140,7 @@ class UserCards extends Component {
           ))}
         </div>
         <button
-          className="btn btn-light btn-block w-50 mx-auto"
+          className="btn"
           onClick={e => {
             this.loadMore();
           }}
