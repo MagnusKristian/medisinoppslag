@@ -1,1 +1,3 @@
 npm run deploy for å oppdatere gh pages.
+process.env."name" - for å bruke.
+REACT_APP_"name" - må brukes i env for å fungere.

@@ -12,7 +12,7 @@ import { SearchForm } from "../search/SearchComponent";
 class UserCards extends Component {
   state = {
     data: [],
-    per: 9,
+    per: process.env.REACT_APP_STATE_PER, //9
     page: 1,
     total_pages: null,
     apiTest: process.env.REACT_APP_API_KEY
