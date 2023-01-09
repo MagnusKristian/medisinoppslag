@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/medisinoppslag/static/css/main.9466802c.css",
-    "main.js": "/medisinoppslag/static/js/main.9c16516f.js",
+    "main.js": "/medisinoppslag/static/js/main.5178900b.js",
     "index.html": "/medisinoppslag/index.html",
     "main.9466802c.css.map": "/medisinoppslag/static/css/main.9466802c.css.map",
-    "main.9c16516f.js.map": "/medisinoppslag/static/js/main.9c16516f.js.map"
+    "main.5178900b.js.map": "/medisinoppslag/static/js/main.5178900b.js.map"
   },
   "entrypoints": [
     "static/css/main.9466802c.css",
-    "static/js/main.9c16516f.js"
+    "static/js/main.5178900b.js"
   ]
 }
