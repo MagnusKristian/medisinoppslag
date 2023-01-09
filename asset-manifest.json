@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/medisinoppslag/static/css/main.bb333695.css",
+    "main.js": "/medisinoppslag/static/js/main.9eb33b87.js",
+    "index.html": "/medisinoppslag/index.html",
+    "main.bb333695.css.map": "/medisinoppslag/static/css/main.bb333695.css.map",
+    "main.9eb33b87.js.map": "/medisinoppslag/static/js/main.9eb33b87.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.bb333695.css",
+    "static/js/main.9eb33b87.js"
+  ]
+}
