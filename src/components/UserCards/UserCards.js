@@ -126,11 +126,10 @@ class UserCards extends Component {
           {this.state.data.map(data => (
             <div className="cardContainer" key={data.id.value}>
               <div className="card">
-                <div className="card-body">
                   <div className="avatar">
                     <img
                       src={data.picture.large}
-                      className="card-img-top"
+                      className="cardImage"
                       alt=""
                     />
                   </div>
@@ -146,7 +145,6 @@ class UserCards extends Component {
                     <br />
                     <span className="phone">{data.phone}</span>
                   </p>
-                </div>
               </div>
             </div>
           ))}

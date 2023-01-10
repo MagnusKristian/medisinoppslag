@@ -1,5 +1,6 @@
 
 .card {
+  /* block-size: fit-content; */
   /* padding: 30px; */
   border: solid 1px rgba(0, 0, 0, 0.08);
   cursor: pointer;
@@ -10,17 +11,31 @@
   box-shadow: 0 0 12px 3px rgba(0, 0, 0, 0.08);
 }
 .card-title {
-  margin-top: 20px;
+  /* margin-top: 20px; */
 }
 .card-text {
   font-size: 14px;
   color: rgba(0, 0, 0, 0.6);
 }
-.card-text .fa {
+/* .card-text .fa {
   font-size: 26px;
-}
-.card-img-top{
-  width: 50%;
+} */  
+.cardImage{
+  border: solid 6px transparent;
+  border-radius: 50%;
+  width:80%;
+  margin: auto;
+  /* block-size: fit-content; */
+
+  /* width: 5vw; */
+
+  /* width: 5vw; */
+  /* height: 5vw; */
+
+  /* width: ; */
+  /* margin: 10%; */
+  /* width: 5vw; */
+  /* height: 3vh; */
   /* width: 100px; */
   /* margin: auto; */
   /* margin-top: 10%; */
@@ -28,17 +43,19 @@
 
 }
 .card-body{
-  margin-top: 10%;
+  /* object-fit: cover; */
+  /* margin-top: 10%; */
 }
 .avatar {
+  /* block-size: fit-content; */
   /* size: 50%; */
   /* width: 50%; */
-  margin: auto;
+  /* margin: auto; */
 }
-.avatar img {
+/* .avatar img {
   border: solid 6px transparent;
   border-radius: 50%;
-}
+} */
 .card:hover .avatar img {
   border-color: rgb(99, 204, 131);
 }
@@ -74,9 +91,18 @@
   /* width: auto; */
 }
 .cardContainer{
-  margin: 1%;
-  width: 15%;
-  height: 25%;
+  /* block-size: fit-content; */
+  margin: 2%;
+  width: 150px;
+  height: 250px;
+  /* object-fit: contain; */
+  /* padding: 2%; */
+  /* width: 5vw; */
+  /* height: 60%; */
+  /* height: 10%; */
+  /* margin: 1%; */
+  /* width: 15%; */
+  /* height: 25%; */
   background-image: radial-gradient( rgba(80, 80, 80, 0.99),rgb(40, 44, 52));
   background-color: aqua;
 
