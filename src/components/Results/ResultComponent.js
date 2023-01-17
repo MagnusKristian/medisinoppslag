@@ -4,6 +4,8 @@ import { searchFirstName } from "../../Functions/SearchHelper";
 
 import { useState } from "react";
 // import "./SearchComponentCss.css";
+import Collapsable from "../CollapsableDiv";
+import HardCodeCollapsable from "../HardCodeCollapsableDiv";
 
 
 export const ResultComponent = (props) => {
@@ -110,12 +112,16 @@ export const ResultComponent = (props) => {
 
   return (
     <>
-      <div className="resultsContainer" style={{border: "1px solid black"}}>
+      <div className="resultsContainer" style={{border: "1px solid black", width: "100%"}}>
         {props.searchResults.map(data => (
           <div className="card" key={data.id} style={{border: "1px solid black"}}>
             <strong>{data.varenavn}</strong>
             <hr/>
-            <div className="idAsBase64">idAsBase64: {data.idAsBase64}</div>
+            {/* <Collapsable label="Vis mer" className={"classname"} text={"info"} value={"valueinfo"}/> */}
+
+            {/* <Collapsable className={"classname"} infoText={"varenavn"} infoValue={data.varenavn}/> */}
+            <HardCodeCollapsable data={data}/>
+            {/* <div className="idAsBase64">idAsBase64: {data.idAsBase64}</div>
             <div className="id">id: {data.id}</div>
             <div className="navnFormStyrke">navnFormStyrke: {data.navnFormStyrke}</div>
             <div className="varenavn">varenavn: {data.varenavn}</div>
@@ -124,7 +130,7 @@ export const ResultComponent = (props) => {
             <div className="infoType">infoType: {data.infoType}</div>
             <div className="legemiddelMerkevareId">legemiddelMerkevareId: {data.legemiddelMerkevareId}</div>
             <div className="markedsforingsdato">markedsforingsdato: {data.markedsforingsdato}</div>
-            <div className="typeSoknadSlv">typeSoknadSlv: {data.typeSoknadSlv}</div>
+            <div className="typeSoknadSlv">typeSoknadSlv: {data.typeSoknadSlv}</div> */}
               
           </div>
         ))}

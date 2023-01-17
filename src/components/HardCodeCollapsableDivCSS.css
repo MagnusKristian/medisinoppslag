@@ -1,0 +1,13 @@
+.collapsableContainer{
+  /* width: 150%; */
+
+}
+.openDivs{
+  /* width: 150%; */
+  /* float: inline-start; */
+}
+.openDivs div{
+  border: 1px solid black;
+  /* width: fit-content; */
+  /* float: left; */
+}
