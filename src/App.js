@@ -13,8 +13,8 @@ function App() {
           {/* TODO:lage logo? finne ut navn. pluss sjekk notater på telefonen, implementer.*/}
         </p>
       </header>
-      <Results/>
-      {/* <Search/> */}
+      {/* <Results/> */}
+      <Search/>
 
     </div>
   );
