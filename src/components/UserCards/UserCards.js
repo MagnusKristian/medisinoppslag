@@ -15,7 +15,8 @@ class UserCards extends Component {
     per: process.env.REACT_APP_STATE_PER, //9
     page: 1,
     total_pages: null,
-    apiTest: process.env.REACT_APP_API_KEY
+    apiTest: process.env.REACT_APP_API_KEY,
+    searchData: []  
   };
 
   
@@ -29,7 +30,7 @@ class UserCards extends Component {
     // const MY_KEY = process.env.REACT_APP_API_KEY;
 
     const { per, page, data } = this.state;
-    const endpoint = `https://randomuser.me/api/?nat=us&results=${per}&page=${page}`;
+    const endpoint = `https://randomuser.me/api/?results=${100}&nat=us`;
     fetch(endpoint)
       .then(response => response.json())
       .then(json => {

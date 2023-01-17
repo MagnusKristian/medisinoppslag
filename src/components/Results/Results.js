@@ -1,6 +1,7 @@
 import "./ResultsCss.css";
-// import ResultCards from "./ResultCards";
+import ResultCards from "./ResultCards";
 import UserCards from "../UserCards/UserCards";
+
 
 function Results() {
   return (
@@ -8,6 +9,7 @@ function Results() {
       <div className="Results">
       Results here: <br/>
 
+      <ResultCards/>
       asdasd
       {/* Swap this, maybe clean up/remove one step depending on features. */}
       {/* fix and use resultCards instead. */}
