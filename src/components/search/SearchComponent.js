@@ -9,8 +9,8 @@ export const SearchForm = (props) => {
   // const [count1, setCount1] = useState(0);
   // const [count2, setCount2] = useState(0);
 
-  let searchInfo = {apiKey: "",searchWord:"x",checkbox1:false,checkbox2:false,checkbox3:false,checkbox4:false,resultAmmount:1};
-  const [searchValue, setSearchValue] = useState({apiKey: "",searchWord:"x",checkbox1:false,checkbox2:false,checkbox3:false,checkbox4:false,resultAmmount:1});
+  // let searchInfo = {apiKey: "",searchWord:"x",checkbox1:false,checkbox2:false,checkbox3:false,checkbox4:false,resultAmmount:1};
+  const [searchValue, setSearchValue] = useState({per: "3",page: "1",apiKey: "",searchWord:"x",checkbox1:false,checkbox2:false,checkbox3:false,checkbox4:false,resultAmmount:1});
 
 
 
@@ -71,11 +71,11 @@ export const SearchForm = (props) => {
 
 
 
-  const submitSearch = (searchParameters) => { 
+  const submitSearch = (searchParameters,setSearchValue) => { 
     console.log("Submitting search");
     console.log("searchParameters: "+searchParameters);
     
-    props.setSearchResults(searchApi(searchParameters));
+    props.setSearchResults(searchApi(searchParameters,setSearchValue));
 
 
   }

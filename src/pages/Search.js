@@ -37,7 +37,7 @@ function Search() {
 
       <div className='ResultBox'>
       <hr/>
-        <p>HERE ARE YOUR RESULTS: id:{console.log(searchResults[0].id)}</p>
+        {/* <p>HERE ARE YOUR RESULTS: id:{console.log(searchResults[0].id)}</p> */}
       <br/>
       <ResultComponent searchResults={searchResults}/>
 
