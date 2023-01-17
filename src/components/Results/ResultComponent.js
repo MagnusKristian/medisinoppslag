@@ -6,16 +6,12 @@ import { useState } from "react";
 // import "./SearchComponentCss.css";
 
 
-export const ResultComponent = () => {
-  const [count1, setCount1] = useState(0);
-  const [count2, setCount2] = useState(0);
-  //const [username, setUsername] = useState();
-  //const [password, setPassword] = useState();
-
-  const [formValue, setFormValue] = useState({
-    username: "",
-    password: "",
-  });
+export const ResultComponent = (props) => {
+ 
+  // const [formValue, setFormValue] = useState({
+  //   username: "",
+  //   password: "",
+  // });
 
   // const handleChange = (e)=>{
   //   const {name,value} = e.target;
@@ -26,7 +22,7 @@ export const ResultComponent = () => {
   //     };
   //   });
   // };
-  const { username, password } = formValue;
+  // const { username, password } = formValue;
 
   //this.handleSubmit = this.handleSubmit.bind(this);
 
@@ -113,43 +109,26 @@ export const ResultComponent = () => {
  
 
   return (
-      <>
-        <div className="row">
-          {/* {this.state.data.map(data => ( */}
-            {/* <div className="cardContainer" key={data.id.value}> */}
-            <div className="cardContainer">
-              <div className="card">
-                  <div className="avatar">
-                    <img
-                      // src={data.picture.large}
-                      className="cardImage"
-                      alt=""
-                    />
-                  </div>
-                  {/* <h5 className="card-title">
-                    {this.uppercase(data.name.first) +
-                      " " +
-                      this.uppercase(data.name.last)}
-                  </h5> */}
-                  <p className="card-text">
-                    {/* {data.location.city +
-                      ", " +
-                      this.uppercase(data.location.state)} */}
-                    <br />
-                    {/* <span className="phone">{data.phone}</span> */}
-                  </p>
-              </div>
-            </div>
-          {/* ))} */}
-        </div>
-        <button
-          className="btn"
-          onClick={e => {
-            this.loadMore();
-          }}
-        >
-          Load More Users
-        </button>
-      </>
-    );
+    <>
+      <div className="resultsContainer" style={{border: "1px solid black"}}>
+        {props.searchResults.map(data => (
+          <div className="card" key={data.id} style={{border: "1px solid black"}}>
+            <strong>{data.varenavn}</strong>
+            <hr/>
+            <div className="idAsBase64">idAsBase64: {data.idAsBase64}</div>
+            <div className="id">id: {data.id}</div>
+            <div className="navnFormStyrke">navnFormStyrke: {data.navnFormStyrke}</div>
+            <div className="varenavn">varenavn: {data.varenavn}</div>
+            <div className="atcKode">atcKode: {data.atcKode}</div>
+            <div className="preparattype">preparattype: {data.preparattype}</div>
+            <div className="infoType">infoType: {data.infoType}</div>
+            <div className="legemiddelMerkevareId">legemiddelMerkevareId: {data.legemiddelMerkevareId}</div>
+            <div className="markedsforingsdato">markedsforingsdato: {data.markedsforingsdato}</div>
+            <div className="typeSoknadSlv">typeSoknadSlv: {data.typeSoknadSlv}</div>
+              
+          </div>
+        ))}
+      </div>
+    </>
+  );
 }
