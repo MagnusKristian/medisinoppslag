@@ -20,8 +20,46 @@ export const SearchForm = (props) => {
   // });
 
   const handleChange = (e)=>{
-    e.preventDefault();
-    console.log(e.target.value);
+    // console.log("handleChange.type of thing: "+e.target.type);
+    console.log("handleChange: ");
+
+    if(e.target.type == "checkbox"){
+      console.log("it is a checkbox...........");
+      setSearchValue({[e.target.name]: e.target.checked});
+    console.log({[e.target.name]: e.target.checked});
+
+    }else{
+    setSearchValue({[e.target.name]: e.target.value});
+    console.log({[e.target.name]: e.target.value});
+    }
+
+    // setSearchValue({
+    //   apiKey: e.target["apiKey"].value,
+    //   searchWord: e.target["search1"].value,
+    //   checkbox1: e.target["checkbox1"].value,
+    //   checkbox2: e.target["checkbox2"].value,
+    //   checkbox3: e.target["checkbox3"].value,
+    //   checkbox4: e.target["checkbox4"].value,
+    //   resultAmmount: e.target["pAmmount"].value,
+    // });
+
+
+
+    
+
+
+    // console.log("state.searchvalue.resultammount: "+searchValue["resultAmmount"]);
+
+
+
+
+
+
+    // e.preventDefault();
+    // console.log("handleChange target&value");
+
+    // console.log(e.target);
+    // console.log(e.target.value);
 
     // const {name,value} = e.target;
     // setFormValue((prevState)=>{
@@ -31,42 +69,7 @@ export const SearchForm = (props) => {
     //   };
     // });
   };
-  // const { username, password } = formValue;
-
-  //this.handleSubmit = this.handleSubmit.bind(this);
-
   
-
-  // const handleChange = (e) => { 
-  //   setUsername(e.target.value);
-  //   console.log(e.target.value);
-  // }
-
-  // const sortInput = (formInfo) => { 
-  //   let lapiKey = formInfo["apiKey"].value;
-  //   let lsearchWord = formInfo["searchWord"];
-  //   let lcheckbox1 = formInfo["checkbox1"];
-  //   let lcheckbox2 = formInfo["checkbox2"];
-  //   let lcheckbox3 = formInfo["checkbox3"];
-  //   let lcheckbox4 = formInfo["checkbox4"];
-  //   let lammount = formInfo["ammount"];
-  //   console.log("lapiKey: "+lapiKey.value);
-
-  //   setSearchValue({
-  //     apiKey: lapiKey,
-  //     searchWord: lsearchWord,
-  //     checkbox1: lcheckbox1,
-  //     checkbox2: lcheckbox2,
-  //     checkbox3: lcheckbox3,
-  //     checkbox4: lcheckbox4,
-  //     resultAmmount: lammount,
-  //   });
-  //   console.log("searchValue.apiKey: "+searchValue.apiKey);
-  //   console.log("searchValue.searchWord: "+searchValue.searchWord);
-  //   console.log("searchValue.checkbox1: "+searchValue.checkbox1);
-  //   console.log("searchValue.resultAmmount: "+searchValue.resultAmmount);
-  // }
-
 
 
 
@@ -74,6 +77,13 @@ export const SearchForm = (props) => {
   const submitSearch = (searchParameters,setSearchValue) => { 
     console.log("Submitting search");
     console.log("searchParameters: "+searchParameters);
+    console.log("searchParameters: "+searchParameters["apiKey"]);
+    console.log("searchParameters: "+searchParameters["searchWord"]);
+    console.log("searchParameters: "+searchParameters["checkbox1"]);
+    console.log("searchParameters: "+searchParameters["checkbox2"]);
+    console.log("searchParameters: "+searchParameters["checkbox3"]);
+    console.log("searchParameters: "+searchParameters["checkbox4"]);
+    console.log("searchParameters: "+searchParameters["resultAmmount"]);
     
     props.setSearchResults(searchApi(searchParameters,setSearchValue));
 
@@ -88,6 +98,24 @@ export const SearchForm = (props) => {
     e.preventDefault();
     // sortInput(e.target);
 
+    // console.log("handlesubmit.apiKey: "+e.target["apiKey"].value);
+    // console.log("handlesubmit.search1: "+e.target["search1"].value);
+    // console.log("handlesubmit.checkbox1: "+e.target["checkbox1"].value);
+    // console.log("handlesubmit.checkbox1: "+e.target["checkbox2"].value);
+    // console.log("handlesubmit.checkbox1: "+e.target["checkbox3"].value);
+    // console.log("handlesubmit.checkbox1: "+e.target["checkbox4"].value);
+    // console.log("handlesubmit.pAmmount: "+e.target["pAmmount"].value);
+
+    // let values = {
+    //   apiKey: e.target["apiKey"].value,
+    //   searchWord: e.target["search1"].value,
+    //   checkbox1: e.target["checkbox1"].value,
+    //   checkbox2: e.target["checkbox2"].value,
+    //   checkbox3: e.target["checkbox3"].value,
+    //   checkbox4: e.target["checkbox4"].value,
+    //   resultAmmount: e.target["pAmmount"].value,
+    // };
+
     setSearchValue({
       apiKey: e.target["apiKey"].value,
       searchWord: e.target["search1"].value,
@@ -95,10 +123,11 @@ export const SearchForm = (props) => {
       checkbox2: e.target["checkbox2"].value,
       checkbox3: e.target["checkbox3"].value,
       checkbox4: e.target["checkbox4"].value,
-      resultAmmount: e.target["ammount"].value,
+      resultAmmount: e.target["resultAmmount"].value,
     });
+    console.log("state.searchvalue.resultammount: "+searchValue["resultAmmount"])
 
-    submitSearch(searchValue);
+    submitSearch(searchValue,setSearchValue);
   }
 
 
@@ -132,15 +161,15 @@ export const SearchForm = (props) => {
             </div>
             <br/>
 
-            <label htmlFor="ammount">Choose how many results: </label>
-            <select id="ammount" name="ammount">
-              <option value="1">1</option>
+            <label htmlFor="resultAmmount">Choose how many results: </label>
+            <select id="resultAmmount" name="resultAmmount" onChange={handleChange} required>
               <option value="5">5</option>
               <option value="10">10</option>
+              <option value="15">15</option>
               <option value="20">20</option>
             </select>
             <br/>
-            <button>Search</button>
+            <button type="submit">Search</button>
           </form> 
         </div>
       </div>
