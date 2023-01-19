@@ -24,6 +24,7 @@ function Search() {
     }]
   );
 
+  
   return (
     <div className="Search">
       <div className='SearchBox'>
