@@ -6,6 +6,7 @@ import "../components/UserCards/UserCardsCss.css";
 import ResultCards from '../components/Results/ResultCards';
 import {ResultComponent} from '../components/Results/ResultComponent';
 import { useState } from 'react';
+import { AlternateResults } from '../components/Results/AlternateResults';
 
 
 function Search() {
@@ -40,8 +41,11 @@ function Search() {
       <hr/>
         {/* <p>HERE ARE YOUR RESULTS: id:{console.log(searchResults[0].id)}</p> */}
       <br/>
-      <ResultComponent searchResults={searchResults}/>
 
+      {/* using resultComponent.. */}
+      {/* <ResultComponent searchResults={searchResults}/> */}
+
+      <AlternateResults searchResults={searchResults}/>
 
 
         {/* <Results/> */}
