@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Results from "../Results/Results";
 // import "./SearchComponentCss.css";
 import { searchApi } from '../../Functions/SearchHelper';
@@ -77,20 +77,21 @@ export const SearchForm = (props) => {
   const submitSearch = (searchParameters,setSearchValue) => { 
     console.log("Submitting search");
     console.log("searchParameters: "+searchParameters);
-    console.log("searchParameters: "+searchParameters["apiKey"]);
-    console.log("searchParameters: "+searchParameters["searchWord"]);
-    console.log("searchParameters: "+searchParameters["checkbox1"]);
-    console.log("searchParameters: "+searchParameters["checkbox2"]);
-    console.log("searchParameters: "+searchParameters["checkbox3"]);
-    console.log("searchParameters: "+searchParameters["checkbox4"]);
-    console.log("searchParameters: "+searchParameters["resultAmmount"]);
+    console.log("searchParameters apiKey: "+searchParameters["apiKey"]);
+    console.log("searchParameters searchWord: "+searchParameters["searchWord"]);
+    console.log("searchParameters checkbox1: "+searchParameters["checkbox1"]);
+    console.log("searchParameters checkbox2: "+searchParameters["checkbox2"]);
+    console.log("searchParameters checkbox3: "+searchParameters["checkbox3"]);
+    console.log("searchParameters checkbox4: "+searchParameters["checkbox4"]);
+    console.log("searchParameters resultAmmount: "+searchParameters["resultAmmount"]);
+
     
     props.setSearchResults(searchApi(searchParameters,setSearchValue));
 
 
   }
 
-
+  
 
 
 
@@ -136,13 +137,13 @@ export const SearchForm = (props) => {
       <div className="SearchPanel">
         <div className="SearchForm">
           <form onSubmit={handleSubmit}>
-            {/* <label >Search</label> */}
+            {/* <label >Search</label> */} 
             <div className="SearchDiv" style={{fontSize:"large"}}>z </div>
             {/* <input type="text" id="SearchInput" name="Search" placeholder="Enter Text here" onChange={handleChange}/> */}
             <br/>
             {/* <input type="number"></input>
             <input type="range"></input> */}<label htmlFor="apiKey" >Enter api Key here: </label>
-            <input type="text" id="apiKey" name="apiKey" placeholder="Enter api Key here" onChange={handleChange} autoFocus></input><br/><br/><br/>
+            <input type="password" id="apiKey" name="apiKey" placeholder="Enter api Key here" onChange={handleChange} autoFocus></input><br/><br/><br/>
             <label htmlFor="search1" >Search with text: </label>
             <input type="search" id="search1" name="search1" placeholder="Enter search text" onChange={handleChange} autoFocus></input><br/>
             <br/>

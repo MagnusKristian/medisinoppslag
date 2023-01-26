@@ -5,7 +5,7 @@ import { two } from "../../Functions/SearchHelper";
 
 import { searchFirstName } from "../../Functions/SearchHelper";
 
-import { SearchForm } from "../search/SearchComponent";
+import { SearchForm } from "../search/SearchForm";
 
 
 

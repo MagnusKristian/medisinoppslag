@@ -58,6 +58,11 @@ export const one = () => {
 
 
  export const searchApi = (sp,setSearchValue)=>{
+  console.log("----apikey : searchApi: "+sp["apiKey"]);
+  console.log("----searchWord2 : searchApi: "+sp.searchWord);
+
+  console.log("----searchWord : searchApi: "+sp["searchWord"]);
+
 
   let errorMessage = "X";
   let results = [{
@@ -102,10 +107,11 @@ export const one = () => {
 
 
   // const endpoint = `https://api-qa.helsedirektoratet.no/legemidler/legemidler/sok?queryText=${sp.searchWord}&Top=${sp.resultAmmount}&Skip=0`;
-  const endpoint = `https://api-qa.helsedirektoratet.no/legemidler/legemidler/sok?queryText=${"melatonin"}&Top=${"10"}&Skip=${"10"}`;
+  const endpoint = `https://api-qa.helsedirektoratet.no/legemidler/legemidler/sok?queryText=${sp.searchWord}&Top=${"10"}&Skip=${"10"}`;
 
   let endresult;
-  
+  console.log("sp-apikey: "+`${sp.apiKey}`)
+  console.log("sp-searchWord: "+`${sp.searchWord}`)
     fetch(endpoint, {
       method: 'GET',
       // Request headers
@@ -114,7 +120,11 @@ export const one = () => {
           'Ocp-Apim-Subscription-Key': `${sp.apiKey}`}
     })
     .then(response => response.json())
-    .then(response => { endresult = JSON.stringify(response); console.log(".then-solo: "+JSON.stringify(response)) ; results = JSON.stringify(response); console.log(".then-solo response: "+results) ; return results})
+    .then(response => { endresult = JSON.stringify(response);console.log(".then-endresult: "+endresult) ; console.log(".then-response: "+JSON.stringify(response)) ; results = JSON.stringify(response); console.log(".then-solo response: "+results) ;})
+    // .then(response => { endresult = JSON.stringify(response); return endresult})
+     
+    
+    
     // .then(response => {results = JSON.stringify(response); console.log(".then - results = response: "+JSON.stringify(results))})
 
     // .then(response => {
@@ -153,8 +163,11 @@ export const one = () => {
 
 
   
+console.log("endresult: "+JSON.stringify(endresult));
+  // return results;
+return endresult
 
-  return results;
+
 
   // const tempForTesting = results.concat(tempdata); 
   // return tempForTesting;

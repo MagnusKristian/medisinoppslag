@@ -23,8 +23,7 @@ export const AlternateResults = (props) => {
                 convallis et, iaculis ac massa.
               </p>
             </div>
-
-            {props.searchResults.map((data) => (
+            {props.searchResults != null && props.searchResults.map((data) => (
               <div
                 className="card"
                 key={data.id}
@@ -50,7 +49,7 @@ export const AlternateResults = (props) => {
                 <HardCodeCollapsable data={data} />
               </div>
             ))}
-            {props.searchResults.map((data) => (
+            {props.searchResults != null && props.searchResults.map((data) => (
               <div
                 className="card"
                 key={data.id}
@@ -75,7 +74,7 @@ export const AlternateResults = (props) => {
                 <HardCodeCollapsable data={data} />
               </div>
             ))}
-            {props.searchResults.map((data) => (
+            {props.searchResults != null && props.searchResults.map((data) => (
               <div
                 className="card"
                 key={data.id}
