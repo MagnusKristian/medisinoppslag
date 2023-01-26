@@ -191,13 +191,15 @@
   .m-0{
     height: inherit;
   }
-  .footer-bottom {
-    /* background-color:rgb(255, 0, 0); */
-    /* height: 2vh; */
-  }
-  .footer-top {
-    /* background-color:rgba(0255,255,255,1); */
-  }
+
+  /* .footer-bottom {
+    background-color:rgb(255, 0, 0);
+    height: 2vh;
+  } */
+
+  /* .footer-top {
+    background-color:rgba(0255,255,255,1);
+  } */
 
   .panel-footer {
     font-size:12px;

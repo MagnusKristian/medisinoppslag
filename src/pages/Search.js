@@ -1,10 +1,5 @@
 import { SearchForm } from '../components/search/SearchForm';
-import Results from '../components/Results/Results';
 import "./SearchCss.css";
-import UserCards from "../components/UserCards/UserCards";
-import "../components/UserCards/UserCardsCss.css";
-import ResultCards from '../components/Results/ResultCards';
-import {ResultComponent} from '../components/Results/ResultComponent';
 import { useState } from 'react';
 import { useEffect } from 'react';
 import { AlternateResults } from '../components/Results/AlternateResults';

@@ -1,6 +1,5 @@
 import "./ResultsCss.css";
 import ResultCards from "./ResultCards";
-import UserCards from "../UserCards/UserCards";
 
 
 function Results() {

@@ -1,6 +1,6 @@
-import { useEffect, useState } from "react";
-import Results from "../Results/Results";
-// import "./SearchComponentCss.css";
+import { useState } from "react";
+// import { useEffect } from "react";
+// import Results from "../Results/Results";
 import { searchApi } from '../../Functions/SearchHelper';
 
 
@@ -13,7 +13,6 @@ export const SearchForm = (props) => {
   const [searchValue, setSearchValue] = useState({per: "3",page: "1",apiKey: "",searchWord:"x",checkbox1:false,checkbox2:false,checkbox3:false,checkbox4:false,resultAmmount:1});
 
 
-
   // const [formValue, setFormValue] = useState({
   //   username: "",
   //   password: "",
@@ -23,7 +22,7 @@ export const SearchForm = (props) => {
     // console.log("handleChange.type of thing: "+e.target.type);
     console.log("handleChange: ");
 
-    if(e.target.type == "checkbox"){
+    if(e.target.type === "checkbox"){
       console.log("it is a checkbox...........");
       setSearchValue({[e.target.name]: e.target.checked});
     console.log({[e.target.name]: e.target.checked});
