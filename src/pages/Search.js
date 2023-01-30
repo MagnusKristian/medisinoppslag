@@ -8,6 +8,7 @@ import { AlternateResults } from '../components/Results/AlternateResults';
 function Search() {
   const [searchResults, setSearchResults] = useState(
     [{
+      "testThing": "TEST-THING",
       "idAsBase64": "idAsBase64",
       "id": "id",
       "navnFormStyrke": "navnFormStyrke",
@@ -28,29 +29,14 @@ function Search() {
   return (
     <div className="Search">
       <div className='SearchBox'>
-        {/* <SearchForm/> */}
       </div>
-
       <br/>
       <hr style={{width:"100%"}}/>
       <br/>
       <SearchForm setSearchResults={setSearchResults}/>
-
       <div className='ResultBox'>
       <hr/>
-        {/* <p>HERE ARE YOUR RESULTS: id:{console.log(searchResults[0].id)}</p> */}
-      <br/>
-
-      {/* using resultComponent.. */}
-      {/* <ResultComponent searchResults={searchResults}/> */}
-
       <AlternateResults searchResults={searchResults}/>
-
-
-        {/* <Results/> */}
-      {/* <UserCards/> */}
-      {/* <ResultCards/> */}
-
       </div>
     </div>
   );
